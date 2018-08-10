@@ -14,17 +14,14 @@ export let Game = {
     Level.render()
   },
 
-  renderLevel() {
-
-  },
-
   gameLoop() {
-    console.log('Has enter been pressed?' + Controller.enter)
-    Level.render()
-    if (Controller.enter) {
-      this.level = 'woods'
-      clearInterval(this.gameLoop)
+    if (Controller.left || Controller.right || Controller.enter || Controller.jump) {
+      console.log('GameLoop Input Enter:' + Controller.enter)
+      console.log('GameLoop Input Left:' + Controller.left)
+      console.log('GameLoop Input Right:' + Controller.right)
+      console.log('GameLoop Input Jump:' + Controller.jump)
     }
+    Level.render()
 
   }
 

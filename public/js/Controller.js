@@ -1,3 +1,5 @@
+import { Game } from './Game.js'
+
 export let Controller = {
   left: false,
   right: false,
@@ -8,13 +10,20 @@ export let Controller = {
     window.addEventListener("keydown", this.keyListener)
     window.addEventListener("keyup", this.keyListener)
   },
-
+  command(input) {
+    if (input == 'enter') {
+      if (Game.level == 'splash') {
+        console.log('change level')
+      }
+    }
+  },
   keyListener(e) {
     let keyState = (e.type == "keydown") ? true: false;
     console.log()
     switch(e.keyCode) {
       case 13:
         this.enter = keyState
+        if (this.enter) { this.command('enter') }
         console.log('enter')
       break;
       case 37:
@@ -30,6 +39,8 @@ export let Controller = {
         console.log('right')
       break;
     }
-  }
+  },
+
+
 
 }
