@@ -1,12 +1,15 @@
 export let characters = {
   "joschi": {
-    sprite: "/img/joschi.png"
+    path: "/img/joschi/",
+    standing: "joschi.png"
   },
   "niklas": {
-    sprite: "/img/niklas.png"
+    path: "/img/niklas/",
+    sprite: "/niklas.png"
   },
   "toni": {
-    sprite: "/img/toni.png"
-  }
-
+    path: "/img/toni/",
+    sprite: "toni.png"
+  },
+  "walking": ['walking_1.png', 'walking_2.png', 'walking_3.png', 'walking_4.png']
 }

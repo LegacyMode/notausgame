@@ -4,4 +4,18 @@ html, body {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  background-color: #111;
+  text-align: center;
+  font-family: sans-serif;
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: cemter;
+  color: white;
+}
+
+#app canvas {
+  display: block;
+  margin: 2em auto;
 }

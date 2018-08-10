@@ -2,8 +2,8 @@ import { Game } from './Game.js'
 
 export default class GameDisplay {
   constructor() {
-    this.width = window.innerWidth
-    this.height = this.width / 16 * 8
+    this.width = 800 //window.innerWidth
+    this.height = Math.floor(this.width / 2.3)
     this.view = document.createElement('canvas')
     this.view.width = this.width
     this.view.height = this.height

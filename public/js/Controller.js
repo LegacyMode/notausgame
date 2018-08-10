@@ -19,11 +19,10 @@ export let Controller = {
   },
   keyListener(e) {
     let keyState = (e.type == "keydown") ? true: false;
-    console.log()
     switch(e.keyCode) {
       case 13:
         this.enter = keyState
-        if (this.enter) { this.command('enter') }
+        if (this.enter) { Game.gameStart() }
         console.log('enter')
       break;
       case 37:
@@ -40,7 +39,4 @@ export let Controller = {
       break;
     }
   },
-
-
-
 }

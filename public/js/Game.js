@@ -6,12 +6,21 @@ export let Game = {
   player: null,
   display: null,
   level: 'splash',
+  started: false,
 
   init() {
     this.display = new GameDisplay()
     console.log('Game Initialized..')
     Controller.init()
     Level.render()
+  },
+
+  gameStart() {
+    if (!this.started) {
+      this.started = true
+      this.level = 'woods'
+      console.log('Next level...' + this.level)
+    }
   },
 
   gameLoop() {
