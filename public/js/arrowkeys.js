@@ -82,8 +82,8 @@ if ("ontouchstart" in document.documentElement) {
 	        break;
 	    case ENTER:
 	        //go to index.html
-	        self.location="../ReDesign/index.html";
-	        break;
+					console.log('start game..')
+					break;
 	    default:
 	        //alert("Default");
 	        break;

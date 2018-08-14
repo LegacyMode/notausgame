@@ -32,6 +32,7 @@ h1 {
 #splash .splash {
   width: 800px;
   height: 400px;
+  margin: 0 auto;
   background: url("../img/splash.png"); no-repeat center center fixed;
   background-position: center;
   -webkit-background-size: cover;
