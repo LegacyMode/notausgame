@@ -2,7 +2,7 @@ if ("ontouchstart" in document.documentElement) {
 	//Check if it is a touch device
 	//Touch Device
 	document.write("1"); //If this line is removed it is not working anymore, not sure why.
-	
+
 	var theElement = document.body;
 
 	theElement.addEventListener("mouseup", tapOrClick, false);
@@ -14,7 +14,7 @@ if ("ontouchstart" in document.documentElement) {
 
 	function tapOrClick(event) {
 	   //handle tap or click.
-	   
+
 	   var xCoord = event.clientX;
 	   var yCoord = event.clientY;
 
@@ -24,15 +24,15 @@ if ("ontouchstart" in document.documentElement) {
 
 	   console.log("Middle: " + middle);
 	   console.log("X: " + xCoord);
-	  
+
 
 	   if (xCoord < middle+40 && xCoord > middle-40) {
 	   	//alert("Joschi");
 
 	   	new_player = "choose-joschi"
 	   	$(".arrow").removeClass(current_player);
-		$(".arrow").addClass(new_player);
-		current_player = new_player;
+			$(".arrow").addClass(new_player);
+			current_player = new_player;
 
 	    event.preventDefault();
 	    return false;
@@ -43,8 +43,8 @@ if ("ontouchstart" in document.documentElement) {
 
 	   	new_player = "choose-toni"
 	   	$(".arrow").removeClass(current_player);
-		$(".arrow").addClass(new_player);
-		current_player = new_player;
+			$(".arrow").addClass(new_player);
+			current_player = new_player;
 
 	    event.preventDefault();
 	    return false;
@@ -55,8 +55,8 @@ if ("ontouchstart" in document.documentElement) {
 
 	   	new_player = "choose-niklas"
 	   	$(".arrow").removeClass(current_player);
-		$(".arrow").addClass(new_player);
-		current_player = new_player;
+			$(".arrow").addClass(new_player);
+			current_player = new_player;
 
 	    event.preventDefault();
 	    return false;
@@ -138,6 +138,3 @@ document.onkeydown = checkKeycode;
 //********************************************************
 
 }
-
-
-

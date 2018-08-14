@@ -10,6 +10,7 @@ export let Game = {
 
   init() {
     this.display = new GameDisplay()
+    // this.player = this.display.splashScreen.player
     console.log('Game Initialized..')
     Controller.init()
     Level.render()

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,600,700');
+
 html, body {
   margin: 0;
   padding: 0;
@@ -18,4 +20,69 @@ h1 {
 #app canvas {
   display: block;
   margin: 2em auto;
+}
+
+/************************/
+/*    Splash            */
+/************************/
+#splash, #app {
+  width: 100%;
+  height: 100%;
+}
+#splash .splash {
+  width: 800px;
+  height: 400px;
+  background: url("../img/splash.png"); no-repeat center center fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#splash .arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#splash .choose-niklas {
+  background: url("../img/choose-niklas.png"); no-repeat center center fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#splash .choose-joschi{
+  background: url("../img/choose-joschi.png"); no-repeat center center fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#splash .choose-toni{
+  background: url("../img/choose-toni.png"); no-repeat center center fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#splash .blink-me {
+  animation: blinker 0.8s linear infinite;
+}
+
+@keyframes blinker {
+  0% {opacity: 1;}
+  49% {opacity: 1;}
+  50% {opacity: 0;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
 }
