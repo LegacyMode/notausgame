@@ -1,6 +1,7 @@
 import GameDisplay from './GameDisplay.js'
 import { Controller } from './Controller.js'
 import { Level } from './Level.js'
+import { Player } from './Player.js'
 
 export let Game = {
   player: null,
@@ -12,17 +13,20 @@ export let Game = {
     this.display = new GameDisplay()
     // this.player = this.display.splashScreen.player
     console.log('Game Initialized..')
+    this.started = true
+    this.player = 'joschi'
     Controller.init()
     Level.render()
+    Player.render()
   },
 
-  gameStart() {
-    if (!this.started) {
-      this.started = true
-      this.level = 'woods'
-      console.log('Next level...' + this.level)
-    }
-  },
+  // gameStart() {
+  //   if (!this.started) {
+  //     this.started = true
+  //     this.level = 'woods'
+  //     console.log('Next level...' + this.level)
+  //   }
+  // },
 
   gameLoop() {
     if (Controller.left || Controller.right || Controller.enter || Controller.jump) {
@@ -32,7 +36,7 @@ export let Game = {
       console.log('GameLoop Input Jump:' + Controller.jump)
     }
     Level.render()
-
+    Player.render()
   }
 
 }

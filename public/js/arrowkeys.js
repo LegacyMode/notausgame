@@ -1,3 +1,5 @@
+import { Game } from './Game.js'
+
 if ("ontouchstart" in document.documentElement) {
 	//Check if it is a touch device
 	//Touch Device
@@ -82,14 +84,18 @@ if ("ontouchstart" in document.documentElement) {
 	        break;
 	    case ENTER:
 	        //go to index.html
-					console.log('start game..')
+	        if (!Game.started) {
+						console.log('start game..')
+						Game.init()
+						const loop = setInterval(Game.gameLoop, 20)
+					}
 					break;
 	    default:
 	        //alert("Default");
 	        break;
 	    }
 
-	    key_arrow_or_other.innerHTML += ' (keyCode: ' + keyCodeNumber + ')';
+	    //key_arrow_or_other.innerHTML += ' (keyCode: ' + keyCodeNumber + ')';
 }
 
 function checkKeycode(event) {

@@ -1,4 +1,5 @@
 import { Game } from './Game.js'
+import { Player } from './Player.js'
 
 export let Controller = {
   left: false,
@@ -22,11 +23,13 @@ export let Controller = {
     switch(e.keyCode) {
       case 13:
         this.enter = keyState
-        if (this.enter) { Game.gameStart() }
+        if (this.enter) { //Game.gameStart()
+        }
         console.log('enter')
       break;
       case 37:
         this.left = keyState
+        Player.control('left')
         console.log('left')
       break;
       case 38:
@@ -35,6 +38,7 @@ export let Controller = {
       break;
       case 39:
         this.right = keyState
+        Player.control('right')
         console.log('right')
       break;
     }

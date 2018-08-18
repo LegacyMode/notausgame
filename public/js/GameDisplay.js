@@ -5,7 +5,7 @@ export default class GameDisplay {
     this.width = 800 //window.innerWidth
     this.height = Math.floor(this.width / 2.3)
     this.splashScreen = document.querySelector('#splash')
-    this.splashScreen.style.display = 'hidden'
+    this.splashScreen.style.display = 'none'
     this.view = document.createElement('canvas')
     this.view.width = this.width
     this.view.height = this.height
