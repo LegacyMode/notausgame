@@ -16,7 +16,7 @@ export let Player = {
   "walking": ['walking_1.png', 'walking_2.png', 'walking_3.png', 'walking_4.png'],
   x: 0,
   y: 0,
-  physics() {},
+  update() {},
   control(key) {
     if (key == 'right') { this.x = this.x + 5 }
     if (key == 'left') { this.x = this.x - 5 }

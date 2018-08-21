@@ -18,6 +18,7 @@ export let Game = {
     Controller.init()
     Level.render()
     Player.render()
+    // Update
   },
 
   // gameStart() {
@@ -37,6 +38,7 @@ export let Game = {
     }
     Level.render()
     Player.render()
+    window.requestAnimationFrame(this.gameLoop())
   }
 
 }
