@@ -38,7 +38,9 @@ export let Game = {
     }
     Level.render()
     Player.render()
-    window.requestAnimationFrame(this.gameLoop())
+  },
+  loop() {
+    requestAnimationFrame(this.gameLoop)
   }
 
 }
